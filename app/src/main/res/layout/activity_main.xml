@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luke.quizznanodegree.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="true"
+        android:animateLayoutChanges="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How many legs average human has?" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:text="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:text="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:text="3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is Obama's firs name?"/>
+            <EditText
+                android:id="@+id/edit_text_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is Trump's first name (Don't put clown)"/>
+
+            <EditText
+                android:id="@+id/edit_text_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select two correct synonyms of CLEVER"/>
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:text="smart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                      />
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:text="inteligent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <CheckBox
+                android:id="@+id/checkbox3"
+                android:text="idiot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <CheckBox
+                android:id="@+id/checkbox4"
+                android:text="stupid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/show_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="show results" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset score"
+        android:layout_above="@+id/show_results"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="reset"/>
+
+</RelativeLayout>
