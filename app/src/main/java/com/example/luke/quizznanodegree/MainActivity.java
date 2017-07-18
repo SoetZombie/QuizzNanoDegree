@@ -43,9 +43,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 getResults();
-                Toast.makeText(getApplicationContext(),
-                        "Your score was: " +getScore(), Toast.LENGTH_LONG).show();
+                if (getResults() == 4) {
+                    Toast.makeText(getApplicationContext(),
+                            "Your score was: " + getScore()+" well done!", Toast.LENGTH_LONG).show();
 
+                }
+                else if (getResults()==3){
+                    Toast.makeText(getApplicationContext(),
+                            "Your score was: " + getScore()+" still ok!", Toast.LENGTH_LONG).show();
+
+
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),
+                            "Your score was: " + getScore()+" poor job!", Toast.LENGTH_LONG).show();
+
+                }
             }
         });
     }
@@ -73,18 +86,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void questionFour() {
-        if(checkBox1.isChecked() && checkBox2.isChecked()) {
+        if(checkBox1.isChecked() && checkBox2.isChecked() && !checkBox3.isChecked() && !checkBox4.isChecked()) {
             score +=1;
         }
     }
 
 
-    public void getResults(){
+    public int getResults(){
+        score = 0;
         questionOne();
         questionTwo();
         questionThree();
         questionFour();
 
+        return score;
     }
 
 
